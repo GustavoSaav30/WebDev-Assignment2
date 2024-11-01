@@ -54,7 +54,7 @@ module.exports.update = async function (req, res, next) {
     };
 };
 
-module.exports.remove = async function (req, res, next) {
+module.exports.delete = async function (req, res, next) {
     try {
         const id = req.params.id;
 
