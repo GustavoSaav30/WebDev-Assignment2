@@ -39,7 +39,7 @@ module.exports.update = async function (req, res, next) {
         const contact = new ContactModel(req.body);
         contact._id = id;
 
-        const result = await ContactModel.updateOne({ _id: id }, updateContact);
+        const result = await ContactModel.updateOne({ _id: id }, contact);
 
         if (result.modifiedCount > 0) {
             res.json(

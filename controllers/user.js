@@ -44,7 +44,7 @@ module.exports.update = async function (req, res, next) {
         const user = new UserModel(req.body);
         user._id = id;
 
-        const result = await UserModel.updateOne({ _id: id }, updateUser);
+        const result = await UserModel.updateOne({ _id: id }, user);
 
         if (result.modifiedCount > 0) {
             return res.json(
