@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-const ATLASDB = require('./config').ATLASDB;
+const ATLASDB = require('./config.js');
 
 module.exports = function () {
-
-    mongoose.connect(ATLASDB);
+    console.log(ATLASDB.ATLASDB)
+    mongoose.connect(ATLASDB.ATLASDB);
 
     const mongodb = mongoose.connection;
 
